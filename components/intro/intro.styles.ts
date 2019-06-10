@@ -19,7 +19,7 @@ const TextWrapper = styled.div`
   padding-left: 20px;
 `;
 
-const Text = styled.div`
+const Text = styled.p`
   margin: 0;
 `;
 

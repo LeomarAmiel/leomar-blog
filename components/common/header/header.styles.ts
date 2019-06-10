@@ -7,7 +7,7 @@ const Header = styled.header`
 `;
 
 const LogoLink = styled.h1`
-  font-weight: 700;
+  font-weight: 900;
 `;
 
 export { Header, LogoLink };

@@ -1,7 +1,12 @@
 import Link from "next/link";
 import * as S from "./header.styles";
+import { ThemeContextConsumer } from "@store/index";
 
-export default function Header() {
+interface Props {
+  onSetTheme: () => void;
+}
+
+export default function Header({ onSetTheme }: Props) {
   return (
     <S.Header>
       <S.LogoLink>
@@ -9,6 +14,15 @@ export default function Header() {
           <a>LeomarAmiel</a>
         </Link>
       </S.LogoLink>
+
+      <ThemeContextConsumer>
+        {value => {
+          console.log("value: ", value);
+          return (
+            <button onClick={() => value.dispatch.setDarkTheme()}>yo</button>
+          );
+        }}
+      </ThemeContextConsumer>
     </S.Header>
   );
 }
