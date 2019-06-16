@@ -1,10 +1,11 @@
 import Intro from "@components/intro/intro";
+import Nav from "@components/common/nav/nav";
 
 function Home() {
   return (
     <div>
       <Intro />
-      <div>yo</div>
+      <Nav />
     </div>
   );
 }

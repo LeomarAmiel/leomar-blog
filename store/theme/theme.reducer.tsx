@@ -1,11 +1,17 @@
 import { createContext, useReducer, ReactNode } from "react";
-import * as TYPES from "./types";
-import * as ACTIONS from "./actions";
+import * as TYPES from "./theme.types";
+import * as ACTIONS from "./theme.actions";
 import { Action } from "@store/_core/types";
 
 const initialState = {
   theme: "light"
 };
+
+interface IContextProps {
+  state: typeof initialState;
+  setDarkTheme: () => void;
+  setLightTheme: () => void;
+}
 
 const reducer = (state: typeof initialState, action: Action) => {
   switch (action.type) {
@@ -22,18 +28,16 @@ interface Props {
   children: ReactNode;
 }
 
-const ThemeContext = createContext({ state: initialState });
+const ThemeContext = createContext({} as IContextProps);
 
 const ThemeContextProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const setDarkTheme = ACTIONS.setDarkTheme(dispatch);
-  const setLightTheme = ACTIONS.setDarkTheme(dispatch);
+  const setLightTheme = ACTIONS.setLightTheme(dispatch);
   const value = {
     state,
-    dispatch: {
-      setDarkTheme,
-      setLightTheme
-    }
+    setDarkTheme,
+    setLightTheme
   };
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
@@ -42,4 +46,4 @@ const ThemeContextProvider = ({ children }: Props) => {
 
 const ThemeContextConsumer = ThemeContext.Consumer;
 
-export { ThemeContext, ThemeContextProvider, ThemeContextConsumer };
+export { ThemeContextProvider, ThemeContextConsumer };

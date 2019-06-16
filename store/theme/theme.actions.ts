@@ -1,4 +1,4 @@
-import * as TYPES from "./types";
+import * as TYPES from "./theme.types";
 
 export function setDarkTheme(dispatch: React.Dispatch<any>) {
   return () => {

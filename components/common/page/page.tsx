@@ -1,36 +1,24 @@
-import { Fragment, ReactNode, useState } from "react";
+import { Fragment, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
-import Provider from "@store/_core/provider";
-import { ThemeContextConsumer } from "@store/index";
 import * as S from "./page.styles";
 import { Header, Meta } from "../";
+import { lightTheme, darkTheme } from "@utils/themes";
 
 interface IProps {
   children: ReactNode;
+  theme: string;
+  onSetTheme: () => void;
 }
 
-export default function Page({ children }: IProps) {
-  const [theme, setTheme] = useState("light");
+export default function Page({ children, theme, onSetTheme }: IProps) {
   return (
-    <Provider>
-      <ThemeContextConsumer>
-        {({ state }) => (
-          <ThemeProvider
-            theme={state.theme === "light" ? S.lightTheme : S.darkTheme}
-          >
-            <Fragment>
-              <S.GlobalStyle />
-              <Meta />
-              <Header
-                onSetTheme={() =>
-                  setTheme(theme === "light" ? "dark" : "light")
-                }
-              />
-              <S.Inner>{children}</S.Inner>
-            </Fragment>
-          </ThemeProvider>
-        )}
-      </ThemeContextConsumer>
-    </Provider>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <Fragment>
+        <S.GlobalStyle />
+        <Meta />
+        <Header theme={theme} onSetTheme={onSetTheme} />
+        <S.Inner>{children}</S.Inner>
+      </Fragment>
+    </ThemeProvider>
   );
 }

@@ -20,7 +20,9 @@
       "@assets/*": ["./assets/*"],
       "@pages/*": ["./pages/*"],
       "@components/*": ["./components/*"],
-      "@store/*": ["./store/*"]
+      "@store/*": ["./store/*"],
+      "@containers/*": ["./components/containers/*"],
+      "@utils/*": ["./utils/*"]
     }
   }
 }

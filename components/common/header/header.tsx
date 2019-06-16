@@ -1,12 +1,19 @@
 import Link from "next/link";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+
 import * as S from "./header.styles";
-import { ThemeContextConsumer } from "@store/index";
 
 interface Props {
   onSetTheme: () => void;
+  theme: string;
 }
 
-export default function Header({ onSetTheme }: Props) {
+export default function Header({ onSetTheme, theme }: Props) {
+  const iconColor = theme === "light" ? "rgb(46, 44, 52)" : "white";
   return (
     <S.Header>
       <S.LogoLink>
@@ -15,14 +22,23 @@ export default function Header({ onSetTheme }: Props) {
         </Link>
       </S.LogoLink>
 
-      <ThemeContextConsumer>
-        {value => {
-          console.log("value: ", value);
-          return (
-            <button onClick={() => value.dispatch.setDarkTheme()}>yo</button>
-          );
-        }}
-      </ThemeContextConsumer>
+      <S.Button onClick={onSetTheme}>
+        {theme === "light" ? (
+          <FontAwesomeIcon
+            fixedWidth
+            size="2x"
+            color={iconColor}
+            icon={faMoon}
+          />
+        ) : (
+          <FontAwesomeIcon
+            fixedWidth
+            size="2x"
+            color={iconColor}
+            icon={faSun}
+          />
+        )}
+      </S.Button>
     </S.Header>
   );
 }
