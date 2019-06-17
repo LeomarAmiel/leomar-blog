@@ -1,25 +1,17 @@
 import { ReactNode } from "react";
 import Page from "@components/common/page/page";
-import Provider from "@store/_core/provider";
-import { ThemeContextConsumer } from "@store/index";
+import { useTheme } from "@store/theme";
 
 interface IProps {
   children: ReactNode;
 }
 
 export default function PageContainer({ children }: IProps) {
+  const theme = useTheme("light");
+
   return (
-    <Provider>
-      <ThemeContextConsumer>
-        {({ state: { theme }, setDarkTheme, setLightTheme }) => {
-          const setTheme = theme === "light" ? setDarkTheme : setLightTheme;
-          return (
-            <Page theme={theme} onSetTheme={setTheme}>
-              {children}
-            </Page>
-          );
-        }}
-      </ThemeContextConsumer>
-    </Provider>
+    <Page theme={theme.value} onSetTheme={theme.onChange}>
+      {children}
+    </Page>
   );
 }
