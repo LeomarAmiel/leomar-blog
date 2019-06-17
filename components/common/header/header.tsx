@@ -16,11 +16,11 @@ export default function Header({ onSetTheme, theme }: Props) {
   const iconColor = theme === "light" ? "rgb(46, 44, 52)" : "white";
   return (
     <S.Header>
-      <S.LogoLink>
-        <Link href="/">
-          <a>LeomarAmiel</a>
-        </Link>
-      </S.LogoLink>
+      <Link href="/">
+        <a>
+          <S.LogoLink>LeomarAmiel</S.LogoLink>
+        </a>
+      </Link>
 
       <S.Button onClick={onSetTheme}>
         {theme === "light" ? (

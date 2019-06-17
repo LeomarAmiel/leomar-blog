@@ -27,9 +27,6 @@ body{
 
 }
 a {
-text-decoration: none;
-}
-a:visited {
-  color: ${({ theme }) => theme.text};
+  text-decoration: none;
 }
 `;

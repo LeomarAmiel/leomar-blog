@@ -1,5 +1,5 @@
 import App, { Container } from "next/app";
-import Page from "@containers/page";
+import Page from "@components/containers/page.container";
 
 export default class MyApp extends App {
   render() {
