@@ -1,23 +1,26 @@
 import * as S from "./nav.styles";
-import { useState } from "react";
 
-function Nav() {
-  const [activeTab, setActiveTab] = useState("blogs");
+interface IProps {
+  value: string;
+  onChange: () => void;
+}
+
+function Nav({ value, onChange }: IProps) {
   return (
     <S.Nav>
       <ul>
         <li>
           <button
-            className={activeTab === "blogs" ? "active" : "inactive"}
-            onClick={() => setActiveTab("blogs")}
+            className={value === "blogs" ? "active" : "inactive"}
+            onClick={onChange}
           >
             Blogs
           </button>
         </li>
         <li>
           <button
-            className={activeTab === "about" ? "active" : "inactive"}
-            onClick={() => setActiveTab("about")}
+            className={value === "about" ? "active" : "inactive"}
+            onClick={onChange}
           >
             About
           </button>

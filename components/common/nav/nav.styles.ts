@@ -16,7 +16,7 @@ const Nav = styled.nav`
         font-size: 1.4rem;
         padding: 2rem;
         width: 10rem;
-        font-weight: 800;
+        font-weight: 700;
         &:focus {
           outline: none;
           border-width: 0 1px 1px 0;

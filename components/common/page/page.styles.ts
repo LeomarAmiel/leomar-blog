@@ -8,10 +8,34 @@ export const Inner = styled.div`
 `;
 
 export const GlobalStyle = createGlobalStyle<{ theme: typeof lightTheme }>`
+
+@font-face{ 
+  font-family: "Roboto";
+  src: url('/static/Roboto-Regular.ttf');
+  format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{ 
+  font-family: "Roboto";
+  src: url('/static/Roboto-Bold.ttf');
+  format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face{ 
+  font-family: "Roboto";
+  src: url('/static/Roboto-Black.ttf');
+  format('ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
   font-size: 10px;
-  font-family: "Helvetica"
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -23,6 +47,7 @@ body{
   line-height: 2;
   color: ${({ theme }) => theme.text};
   background-color: ${({ theme }) => theme.backgroundColor};
+  font-family: "Roboto";
   transition: background-color 200ms ease-in;
 
 }
