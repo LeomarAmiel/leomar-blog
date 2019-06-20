@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { ThemeColorTypes } from "@utils/themes";
 
-const Nav = styled.nav`
+const Nav = styled.nav<{ theme: ThemeColorTypes }>`
   ul {
     list-style-type: none;
     padding: 0;
@@ -10,7 +11,7 @@ const Nav = styled.nav`
       & > button {
         border-width: 0 1px 0 0;
         border-style: solid;
-        border-color: ${({ theme }) => theme.text};
+        border-color: black;
         color: ${({ theme }) => theme.text};
         background-color: transparent;
         font-size: 1.4rem;

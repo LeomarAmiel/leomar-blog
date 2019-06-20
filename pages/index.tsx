@@ -3,6 +3,7 @@ import Nav from "@components/common/nav/nav";
 import Main from "@components/common/main/main";
 import About from "@components/about/about";
 import { useTabs } from "@store/activeTab";
+import Work from "@components/work/work";
 
 function Home() {
   const tabs = useTabs("about");
@@ -10,7 +11,10 @@ function Home() {
     <div>
       <Intro />
       <Nav {...tabs} />
-      <Main>{tabs.value === "about" ? <About /> : null}</Main>
+      <Main>
+        {tabs.value === "about" ? <About /> : null}
+        {tabs.value === "work" ? <Work /> : null}
+      </Main>
     </div>
   );
 }

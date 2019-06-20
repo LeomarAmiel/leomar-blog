@@ -1,18 +1,22 @@
 import * as S from "./nav.styles";
+import { ThemeType } from "@store/activeTab";
 
 interface IProps {
   value: string;
-  onChange: () => void;
+  onChange: (tab: ThemeType) => () => void;
 }
 
 function Nav({ value, onChange }: IProps) {
+  const onClickBlogs = onChange("blogs");
+  const onClickAbout = onChange("about");
+  const onClickWork = onChange("work");
   return (
     <S.Nav>
       <ul>
         <li>
           <button
             className={value === "blogs" ? "active" : "inactive"}
-            onClick={onChange}
+            onClick={onClickBlogs}
           >
             Blogs
           </button>
@@ -20,9 +24,17 @@ function Nav({ value, onChange }: IProps) {
         <li>
           <button
             className={value === "about" ? "active" : "inactive"}
-            onClick={onChange}
+            onClick={onClickAbout}
           >
             About
+          </button>
+        </li>
+        <li>
+          <button
+            className={value === "work" ? "active" : "inactive"}
+            onClick={onClickWork}
+          >
+            Work
           </button>
         </li>
       </ul>

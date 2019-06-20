@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { lightTheme } from "@utils/themes";
+import { ThemeColorTypes } from "@utils/themes";
 
 export const Inner = styled.div`
   max-width: 80rem;
@@ -7,7 +7,7 @@ export const Inner = styled.div`
   padding: 2rem;
 `;
 
-export const GlobalStyle = createGlobalStyle<{ theme: typeof lightTheme }>`
+export const GlobalStyle = createGlobalStyle<{ theme: ThemeColorTypes }>`
 
 @font-face{ 
   font-family: "Roboto";
