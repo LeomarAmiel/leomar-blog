@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export type ThemeType = "blogs" | "about" | "work";
+export type TabType = "blogs" | "about" | "work";
 
-export function useTabs(initVal: ThemeType) {
+export function useTabs(initVal: TabType) {
   const [value, setValue] = useState(initVal);
 
-  function handleChange(tab: ThemeType) {
+  function handleChange(tab: TabType) {
     return () => {
       setValue(tab);
     };

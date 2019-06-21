@@ -68,7 +68,7 @@ export default function Work() {
           <li>
             Worked first with mail migrations. Mainly worked as a support for an
             inhouse web application. Was tasked with L2 Support & first had
-            experience doing programming using Excel Macros! Oh Yea! 🤘
+            experience at work doing programming using Excel Macros! Oh Yea! 🤘
           </li>
         </S.BulletList>
       </div>
