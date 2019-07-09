@@ -1,9 +1,9 @@
 import * as S from "./nav.styles";
-import { ThemeType } from "@store/activeTab";
+import { TabType } from "@store/activeTab";
 
 interface IProps {
   value: string;
-  onChange: (tab: ThemeType) => () => void;
+  onChange: (tab: TabType) => () => void;
 }
 
 function Nav({ value, onChange }: IProps) {

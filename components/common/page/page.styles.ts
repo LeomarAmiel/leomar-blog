@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { ThemeColorTypes } from "@utils/themes";
+import { ThemeColorTypes } from "constants/themes";
 
 export const Inner = styled.div`
   max-width: 80rem;

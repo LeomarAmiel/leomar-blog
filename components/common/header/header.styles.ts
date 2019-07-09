@@ -20,7 +20,7 @@ const Button = styled.button`
   height: 4rem;
   border: 3px double ${({ theme }) => theme.text};
   border-radius: 2rem;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.activeBackgroundColor};
 `;
 
 const ButtonImage = styled.img`

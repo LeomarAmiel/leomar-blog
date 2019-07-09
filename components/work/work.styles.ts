@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ThemeColorTypes } from "@utils/themes";
+import { ThemeColorTypes } from "styles/themes";
 
 export const Section = styled.section<{ theme: ThemeColorTypes }>`
   padding: 2rem;
@@ -27,4 +27,8 @@ export const Section = styled.section<{ theme: ThemeColorTypes }>`
 
 export const BulletList = styled.ul`
   padding-left: 2rem;
+
+  li {
+    font-size: 1.4rem;
+  }
 `;

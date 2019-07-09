@@ -4,7 +4,7 @@ export const lightTheme = {
   inactiveTabText: "rgb(146, 145, 149)",
   headingText: "#3621FF",
   link: "rgb(0, 82, 204)",
-  backgroundColor: "rgb(255, 232, 232)",
+  backgroundColor: "rgb(236, 236, 236)",
   activeBackgroundColor: "rgb(255, 255, 255)"
 };
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ThemeColorTypes } from "@utils/themes";
+import { ThemeColorTypes } from "styles/themes";
 
 const Nav = styled.nav<{ theme: ThemeColorTypes }>`
   ul {
@@ -18,11 +18,11 @@ const Nav = styled.nav<{ theme: ThemeColorTypes }>`
         padding: 2rem;
         width: 10rem;
         font-weight: 700;
+
         &:focus {
           outline: none;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
-          border-color: ${({ theme }) => theme.text};
+          color: ${({ theme }) => theme.active};
+          font-weight: 700;
         }
       }
       .active {

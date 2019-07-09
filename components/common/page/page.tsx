@@ -2,7 +2,7 @@ import { Fragment, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 import * as S from "./page.styles";
 import { Header, Meta } from "../";
-import { lightTheme, darkTheme } from "@utils/themes";
+import { lightTheme, darkTheme } from "@styles/themes";
 
 interface IProps {
   children: ReactNode;

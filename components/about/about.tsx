@@ -8,9 +8,9 @@ export default function About() {
         <p>
           I'm a developer! Born & raised in the Philippines. Studied for most of
           my childhood in Marist School Marikina. Botched 1 year of high school
-          in Marikina Science because I wasn't studying at all. Continued
-          studying in Marist to finish high school. I graduated with a
-          Bachelor's Degree in Computer Science in University of Santo Tomas.
+          in Marikina Science because I wasn't studying at all. Returned to
+          Marist to finish high school. I graduated with a Bachelor's Degree in
+          Computer Science in University of Santo Tomas.
         </p>
       </div>
       <div>

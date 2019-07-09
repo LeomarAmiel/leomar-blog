@@ -19,7 +19,9 @@ export default function Work() {
             )
           </li>
           <li>
-            Maintain and improve YuLife App (
+            Maintain and improve yulife app. yulife is a lifestyle insurance
+            company that brings together life insurance, wellbeing, and rewards
+            in one simple app. (
             <Link href="https://apps.apple.com/gb/app/yulife/id1348287598">
               <a target="_blank" rel="noopener noreferrer">
                 iOS
@@ -29,6 +31,17 @@ export default function Work() {
             <Link href="https://play.google.com/store/apps/details?id=com.yulife.app">
               <a target="_blank" rel="noopener noreferrer">
                 Android
+              </a>
+            </Link>
+            )
+          </li>
+          <li>
+            Part of team improving accessibility of Yulife. Using handlebars and
+            really into those HTML5 semantics! For the sign up parts, we're
+            using Next! (
+            <Link href="https://yulife.com">
+              <a target="_blank" rel="noopener noreferrer">
+                web
               </a>
             </Link>
             )
