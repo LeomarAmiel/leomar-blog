@@ -1,5 +1,5 @@
 {
-  "presets": ["next/babel", "@zeit/next-typescript/babel"],
+  "presets": ["next/babel"],
   "plugins": [
     [
       "babel-plugin-styled-components",
@@ -16,9 +16,10 @@
         "alias": {
           "@assets": "./assets",
           "@pages": "./pages",
-          "@components": "./components",
+          "@components": "./src/components",
+          "@screens": "./src/components/screens",
+          "@context": "./src/context",
           "@store": "./store",
-          "@containers": "./components/containers",
           "@styles": "./styles"
         }
       }

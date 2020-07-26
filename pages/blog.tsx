@@ -1,18 +1,18 @@
 import Nav from "@components/common/nav";
 import Main from "@components/common/main";
-import About from "@screens/about";
-import Header from "@components/common/header";
+import Blog from "@screens/blog";
+import { Header } from "@components/common";
 
-function Home() {
+function BlogPage() {
   return (
     <div>
       <Header />
       <Nav />
       <Main>
-        <About />
+        <Blog />
       </Main>
     </div>
   );
 }
 
-export default Home;
+export default BlogPage;

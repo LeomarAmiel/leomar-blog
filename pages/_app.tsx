@@ -1,16 +1,20 @@
-import App, { Container } from "next/app";
-import Page from "@components/containers/page.container";
+import App from "next/app";
+import ThemeProvider from "@context/themeProvider";
+import { Meta } from "@components/common";
+import { GlobalStyle } from "@styles/index";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default class MyApp extends App {
   render() {
-    const { Component } = this.props;
+    const { Component, pageProps } = this.props;
     return (
-      <Container>
-        <Page>
-          <Component />
-        </Page>
-      </Container>
+      <ThemeProvider>
+        <>
+          <GlobalStyle />
+          <Meta />
+          <Component {...pageProps} />
+        </>
+      </ThemeProvider>
     );
   }
 }
