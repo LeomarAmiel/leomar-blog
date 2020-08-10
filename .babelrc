@@ -20,7 +20,7 @@
           "@screens": "./src/components/screens",
           "@context": "./src/context",
           "@store": "./store",
-          "@styles": "./styles"
+          "@styles": "./src/styles"
         }
       }
     ]

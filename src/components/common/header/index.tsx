@@ -2,37 +2,54 @@ import { useContext } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import * as S from "./header.styles";
+import {
+  Header as StyledHeader,
+  Button,
+  LogoLink,
+  DataWrapper,
+  Nav,
+  NavLink,
+  NavWrapper,
+} from "./header.styles";
 import { ThemeContext } from "@context/themeProvider";
 
 export default function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
   const iconColor = theme === "light" ? "rgb(46, 44, 52)" : "white";
   return (
-    <S.Header>
-      <Link href="/">
-        <a>
-          <S.LogoLink>LeomarAmiel</S.LogoLink>
-        </a>
-      </Link>
+    <StyledHeader>
+      <DataWrapper>
+        <h1>
+          <Link href="/">
+            <LogoLink>LeomarAmiel</LogoLink>
+          </Link>
+        </h1>
+        JavaScript Developer
+      </DataWrapper>
 
-      <S.Button onClick={() => setTheme()}>
-        {theme === "light" ? (
-          <FontAwesomeIcon
-            fixedWidth
-            size="2x"
-            color={iconColor}
-            icon={faMoon}
-          />
-        ) : (
-          <FontAwesomeIcon
-            fixedWidth
-            size="2x"
-            color={iconColor}
-            icon={faSun}
-          />
-        )}
-      </S.Button>
-    </S.Header>
+      <NavWrapper>
+        <Nav>
+          <Link href="/">
+            <NavLink>About me</NavLink>
+          </Link>
+          <Link href="/">
+            <NavLink>Projects</NavLink>
+          </Link>
+          <Link href="/">
+            <NavLink>Blogs</NavLink>
+          </Link>
+          <Link href="/">
+            <NavLink>Contact</NavLink>
+          </Link>
+        </Nav>
+        <Button onClick={() => setTheme()}>
+          {theme === "light" ? (
+            <FontAwesomeIcon fixedWidth color={iconColor} icon={faMoon} />
+          ) : (
+            <FontAwesomeIcon fixedWidth color={iconColor} icon={faSun} />
+          )}
+        </Button>
+      </NavWrapper>
+    </StyledHeader>
   );
 }

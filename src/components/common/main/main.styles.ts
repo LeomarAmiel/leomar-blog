@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
-  max-width: 80rem;
-  min-height: 100vh;
+export const StyledMain = styled.main`
+  min-height: calc(100vh - 136px);
+  display: flex;
+  width: 100%;
   background-color: ${({ theme }) => theme.activeBackgroundColor};
-  flex: 1;
 `;

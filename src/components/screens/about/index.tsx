@@ -3,39 +3,27 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 1.6rem;
+  padding-left: 6rem;
 `;
 
 const InnerWrapper = styled.div`
   padding: 1.2rem 0;
 `;
 
+const BigHey = styled(Paragraph)`
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-style: italic;
+`;
+
 export default function About() {
   return (
     <Wrapper>
       <InnerWrapper>
-        <Paragraph>CODER X</Paragraph>
+        <BigHey>Hey!</BigHey>
       </InnerWrapper>
       <InnerWrapper>
-        <Paragraph>
-          First work was with Accenture where I was tasked with doing mail
-          migrations. While I was with Accenture, I started doing{" "}
-          <a
-            href="https://www.freecodecamp.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FreeCodeCamp
-          </a>
-          . I also started hosting some of my code in{" "}
-          <a
-            href="https://codepen.io/LeomarAmiel/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CodePen
-          </a>
-          . I know that my code was shitty back then. But hey, I was learning.
-        </Paragraph>
+        <Paragraph>Welcome to my website!</Paragraph>
       </InnerWrapper>
       <InnerWrapper>
         <Paragraph>
