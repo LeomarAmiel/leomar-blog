@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
@@ -7,8 +7,6 @@ import {
   Button,
   LogoLink,
   DataWrapper,
-  Nav,
-  NavLink,
   NavWrapper,
 } from "./header.styles";
 import { ThemeContext } from "@context/themeProvider";
@@ -28,20 +26,6 @@ export default function Header() {
       </DataWrapper>
 
       <NavWrapper>
-        <Nav>
-          <Link href="/">
-            <NavLink>About me</NavLink>
-          </Link>
-          <Link href="/">
-            <NavLink>Projects</NavLink>
-          </Link>
-          <Link href="/">
-            <NavLink>Blogs</NavLink>
-          </Link>
-          <Link href="/">
-            <NavLink>Contact</NavLink>
-          </Link>
-        </Nav>
         <Button onClick={() => setTheme()}>
           {theme === "light" ? (
             <FontAwesomeIcon fixedWidth color={iconColor} icon={faMoon} />

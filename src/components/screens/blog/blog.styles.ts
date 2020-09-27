@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ThemeColorTypes } from "styles/themes";
+import { ThemeColorTypes } from "@styles/themes";
 
 export const Section = styled.section<{ theme: ThemeColorTypes }>`
   padding: 2rem;

@@ -1,4 +1,4 @@
-import { ReactElement, createContext, useState } from "react";
+import { createContext, useState, FC, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "@styles/themes";
 
@@ -8,7 +8,7 @@ export enum THEME_TYPE {
 }
 
 interface IProps {
-  children?: ReactElement;
+  children?: ReactNode;
 }
 
 export const ThemeContext = createContext({
@@ -16,7 +16,7 @@ export const ThemeContext = createContext({
   setTheme: () => {},
 });
 
-function Provider({ children }: IProps) {
+const Provider: FC<IProps> = ({ children }) => {
   const [theme, setTheme] = useState(THEME_TYPE.light);
   const handleSetTheme = () => {
     setTheme(theme === THEME_TYPE.light ? THEME_TYPE.dark : THEME_TYPE.light);
@@ -28,6 +28,6 @@ function Provider({ children }: IProps) {
       </ThemeProvider>
     </ThemeContext.Provider>
   );
-}
+};
 
 export default Provider;

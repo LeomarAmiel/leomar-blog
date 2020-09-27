@@ -1,9 +1,9 @@
 import Paragraph from "@components/common/paragraph";
+import { FC } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 1.6rem;
-  padding-left: 6rem;
+  padding: 0 20%;
 `;
 
 const InnerWrapper = styled.div`
@@ -16,7 +16,7 @@ const BigHey = styled(Paragraph)`
   font-style: italic;
 `;
 
-export default function About() {
+const About: FC<unknown> = () => {
   return (
     <Wrapper>
       <InnerWrapper>
@@ -27,26 +27,21 @@ export default function About() {
       </InnerWrapper>
       <InnerWrapper>
         <Paragraph>
-          After my stint with Accenture, I took time off working to continue
-          learning JavaScript &amp; started coding with React. Had a good friend
-          of mine mentor me for a few months. And started my first job with{" "}
-          <a
-            href="https://www.pdax.ph/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PDAX
-          </a>{" "}
-          where we built an Exchange.
+          I&apos;m a software developer at YuLife! I have been developing
+          websites and apps for over 3 years now. I mainly do React &#038; React
+          Native. I also ❤️ using TypeScript!
         </Paragraph>
       </InnerWrapper>
       <InnerWrapper>
         <Paragraph>
-          I am now working with Aurity full time as a remote React Native
-          developer. I help create &amp; maintain applications for different
-          clients.
+          In my free time, I mostly play with my friends online (given that
+          we&apos;re in the pandemic). I do my own espresso at home which is
+          kinda cool for me. It probably doesn&apos;t taste that good but
+          it&apos;s good enough for me!
         </Paragraph>
       </InnerWrapper>
     </Wrapper>
   );
-}
+};
+
+export default About;

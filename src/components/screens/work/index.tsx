@@ -1,6 +1,7 @@
+import { FC } from "react";
 import * as S from "./work.styles";
 
-export default function Work() {
+const Work: FC<unknown> = () => {
   return (
     <S.Section>
       <div>
@@ -42,7 +43,7 @@ export default function Work() {
           </li>
           <li>
             Part of team improving accessibility of Yulife. Using handlebars and
-            really into those HTML5 semantics! For the sign up parts, we're
+            really into those HTML5 semantics! For the sign up parts, we&apos;re
             using Next! (
             <a
               href="https://yulife.com"
@@ -60,8 +61,9 @@ export default function Work() {
         <S.BulletList>
           <li>
             Maintain and improve Flyspaces website. FlySpaces is Southeast
-            Asia's Leading Digital Platform With Over 4000 Spaces For Serviced
-            Office, Coworking, Meeting Room & Event Space Solutions. (
+            Asia&apos;s Leading Digital Platform With Over 4000 Spaces For
+            Serviced Office, Coworking, Meeting Room &#38; Event Space
+            Solutions. (
             <a
               href="https://play.google.com/store/apps/details?id=com.yulife.app"
               target="_blank"
@@ -76,10 +78,10 @@ export default function Work() {
 
         <S.BulletList>
           <li>
-            Create first Exchange Beta in the Philippines. Unfortunately didn't
-            launch. Recreated the same project but worked as a Full-Stack &
-            prototyped a User Service with AWS Lambda, API Gateway, RDS, S3 &
-            Sequelize
+            Create first Exchange Beta in the Philippines. Unfortunately
+            didn&apos;t launch. Recreated the same project but worked as a
+            Full-Stack &#38; prototyped a User Service with AWS Lambda, API
+            Gateway, RDS, S3 &#38; Sequelize
           </li>
         </S.BulletList>
       </div>
@@ -89,11 +91,13 @@ export default function Work() {
         <S.BulletList>
           <li>
             Worked first with mail migrations. Mainly worked as a support for an
-            inhouse web application. Was tasked with L2 Support & first had
+            inhouse web application. Was tasked with L2 Support &#38; first had
             experience at work doing programming using Excel Macros! Oh Yea! 🤘
           </li>
         </S.BulletList>
       </div>
     </S.Section>
   );
-}
+};
+
+export default Work;

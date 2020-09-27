@@ -1,10 +1,8 @@
-import { ReactNode } from "react";
+import React, { FC } from "react";
 import { StyledMain } from "./main.styles";
 
-interface IProps {
-  children: ReactNode;
-}
-
-export default function Main({ children }: IProps) {
+const Main: FC<unknown> = ({ children }) => {
   return <StyledMain>{children}</StyledMain>;
-}
+};
+
+export default Main;
