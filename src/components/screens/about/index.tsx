@@ -27,9 +27,9 @@ const About: FC<unknown> = () => {
       </InnerWrapper>
       <InnerWrapper>
         <Paragraph>
-          I&apos;m a software developer at YuLife! I have been developing
-          websites and apps for over 3 years now. I mainly do React &#038; React
-          Native. I also ❤️ using TypeScript!
+          I&apos;m a software engineer! I have been developing websites and apps
+          for over 3 years now. I mainly do React &#038; React Native. I also ❤️
+          using TypeScript!
         </Paragraph>
       </InnerWrapper>
       <InnerWrapper>
