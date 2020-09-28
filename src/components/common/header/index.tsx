@@ -7,12 +7,17 @@ import {
   Button,
   LogoLink,
   DataWrapper,
+  Nav,
+  NavLink,
   NavWrapper,
 } from "./header.styles";
 import { ThemeContext } from "@context/themeProvider";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const router = useRouter();
+  console.log(router.pathname);
   const iconColor = theme === "light" ? "rgb(46, 44, 52)" : "white";
   return (
     <StyledHeader>
@@ -26,6 +31,14 @@ export default function Header() {
       </DataWrapper>
 
       <NavWrapper>
+        <Nav>
+          <Link href="/">
+            <NavLink isSelected={router.pathname === "/"}>About me</NavLink>
+          </Link>
+          <Link href="/work">
+            <NavLink isSelected={router.pathname === "/work"}>Work</NavLink>
+          </Link>
+        </Nav>
         <Button onClick={() => setTheme()}>
           {theme === "light" ? (
             <FontAwesomeIcon fixedWidth color={iconColor} icon={faMoon} />

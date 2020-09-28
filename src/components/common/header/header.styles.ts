@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ThemeColorTypes } from "@styles/themes";
 
 export const Header = styled.header`
   max-width: 100%;
@@ -39,9 +40,14 @@ export const DataWrapper = styled.div`
 
 export const Nav = styled.nav``;
 
-export const NavLink = styled.a`
+export const NavLink = styled.a<{
+  isSelected: boolean;
+  theme: ThemeColorTypes;
+}>`
   margin-right: 1.2rem;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme, isSelected }) =>
+    isSelected ? theme.active : theme.inactiveTabText};
+  font-weight: ${({ isSelected }) => (isSelected ? 700 : 400)};
   text-decoration: underline;
   cursor: pointer;
 `;
