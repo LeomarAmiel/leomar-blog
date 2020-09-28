@@ -12,6 +12,19 @@ export default class MyApp extends App {
         <>
           <GlobalStyle />
           <Head>
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=UA-179192900-1"
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-179192900-1');`,
+              }}
+            />
             <meta
               name="viewport"
               content="width=device-width,initial-scale=1"
@@ -28,6 +41,7 @@ export default class MyApp extends App {
             />
             <meta property="og:image" content="/static/leomaramiel.jpeg" />
             <meta property="og:url" content="https://leomaramiel.tech/" />
+
             <title>Leomar Amiel</title>
           </Head>
           <Component {...pageProps} />
