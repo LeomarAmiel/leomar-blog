@@ -20,7 +20,7 @@ export default class MyApp extends App {
             <link rel="shortcut icon" href="/static/favicon.svg" />
             <meta
               property="og:title"
-              content="Leomar Amiel | Software Developer"
+              content="Leomar Amiel | Software Engineer"
             />
             <meta
               property="og:description"

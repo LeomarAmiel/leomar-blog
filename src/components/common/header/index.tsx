@@ -17,7 +17,6 @@ import { useRouter } from "next/router";
 export default function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
   const router = useRouter();
-  console.log(router.pathname);
   const iconColor = theme === "light" ? "rgb(46, 44, 52)" : "white";
   return (
     <StyledHeader>
