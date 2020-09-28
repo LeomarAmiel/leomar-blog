@@ -1,1 +1,1 @@
-export const GA_TRACKING_ID = "UA-179192900-1";
+export const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
