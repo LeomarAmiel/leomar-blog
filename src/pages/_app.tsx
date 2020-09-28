@@ -3,6 +3,7 @@ import ThemeProvider from "@context/themeProvider";
 import { GlobalStyle } from "@styles/index";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Head from "next/head";
+import { GA_TRACKING_ID } from "../../config";
 
 export default class MyApp extends App {
   render() {
@@ -22,7 +23,9 @@ export default class MyApp extends App {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'UA-179192900-1');`,
+                gtag('config', '${GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });`,
               }}
             />
             <meta
