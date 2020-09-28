@@ -15,7 +15,7 @@ export default class MyApp extends App {
           <Head>
             <script
               async
-              src="https://www.googletagmanager.com/gtag/js?id=UA-179192900-1"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
             />
             <script
               dangerouslySetInnerHTML={{

@@ -1,1 +1,1 @@
-export const GA_TRACKING_ID = "<YOUR_GA_TRACKING_ID>";
+export const GA_TRACKING_ID = "UA-179192900-1";
