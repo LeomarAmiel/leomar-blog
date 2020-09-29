@@ -66,7 +66,7 @@ const Work: FC<unknown> = () => {
           <ListItemHeading>PDAX</ListItemHeading>
           <ListItemDate>May 2018 - Jan 2019</ListItemDate>
           <ListItemParagraph>
-            Jumped from project o proejct, from doing mail migration to
+            Jumped from project to project, from doing mail migration to
             supporting a project management tool used by Accenture employees
             around the world.
           </ListItemParagraph>
