@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 0 20%;
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -23,13 +26,16 @@ const About: FC<unknown> = () => {
         <BigHey>Hey!</BigHey>
       </InnerWrapper>
       <InnerWrapper>
-        <Paragraph>Welcome to my website!</Paragraph>
+        <Paragraph>
+          Welcome to my website! This site is pretty bare bones for now. Hope
+          you bear with it for now!{" "}
+        </Paragraph>
       </InnerWrapper>
       <InnerWrapper>
         <Paragraph>
-          I&apos;m a software engineer! I have been developing websites and apps
-          for over 3 years now. I mainly do React &#038; React Native. I also ❤️
-          using TypeScript!
+          I&apos;m a software engineer based in the Philippines! I have been
+          developing websites and apps for over 3 years now. I mainly do React
+          &#038; React Native. I also ❤️ using TypeScript!
         </Paragraph>
       </InnerWrapper>
       <InnerWrapper>
