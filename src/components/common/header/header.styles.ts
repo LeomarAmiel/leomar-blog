@@ -20,7 +20,7 @@ export const LogoLink = styled.a`
 export const Button = styled.button`
   width: 2.4rem;
   height: 2.4rem;
-  border: 3px double ${({ theme }) => theme.text};
+  border: 2px double ${({ theme }) => theme.text};
   border-radius: 50%;
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.activeBackgroundColor};
