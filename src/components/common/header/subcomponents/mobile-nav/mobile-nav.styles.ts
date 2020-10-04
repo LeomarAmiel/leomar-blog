@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  @media (min-width: 600px) {
+    display: none;
+    visibility: hidden;
+  }
+`;
+
 export const MobileNavWrapper = styled.div`
   position: fixed;
   bottom: 0;
@@ -34,4 +41,13 @@ export const NightModeLink = styled.button`
   align-items: center;
   overflow-y: hidden;
   text-decoration: underline;
+`;
+
+export const Button = styled.button`
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px double ${({ theme }) => theme.text};
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: ${({ theme }) => theme.activeBackgroundColor};
 `;
