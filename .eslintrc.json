@@ -21,6 +21,7 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "no-console": "error",
-    "@typescript-eslint/no-empty-function": "off"
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   }
 }

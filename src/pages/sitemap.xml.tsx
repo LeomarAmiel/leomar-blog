@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetServerSidePropsContext } from "next";
 
 const initialSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -15,12 +15,12 @@ const initialSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 </urlset>
 `;
 
-const Sitemap: NextPage<unknown> = () => null;
+const Sitemap = () => null;
 
-Sitemap.getInitialProps = async ({ res }) => {
+export async function getServerSideProps({ res }: GetServerSidePropsContext) {
   res?.setHeader("Content-Type", "text/xml");
   res?.write(initialSitemap);
   res?.end();
-};
+}
 
 export default Sitemap;
