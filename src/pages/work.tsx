@@ -1,5 +1,5 @@
 import Main from "@components/common/main";
-import Work from "@screens/work";
+import Work from "@components/screens/work/work";
 import { Header } from "@components/common";
 
 function BlogPage() {

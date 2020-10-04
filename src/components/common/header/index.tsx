@@ -7,20 +7,20 @@ import {
   Button,
   LogoLink,
   DataWrapper,
-  MobileNavWrapper,
   Nav,
   NavLink,
   NavWrapper,
-  MobileNavLink,
-  NightModeLink,
 } from "./header.styles";
 import { ThemeContext } from "@context/themeProvider";
 import { useRouter } from "next/router";
+
+import MobileNav from "./subcomponents/mobile-nav/mobile-nav";
 
 const Header: FC<unknown> = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const [width, setWidth] = useState(0);
   const [isShowingMobileNav, setIsShowingMobileNav] = useState(false);
+  const iconColor = theme === "light" ? "rgb(46, 44, 52)" : "white";
 
   useEffect(() => {
     if (window) {
@@ -53,13 +53,6 @@ const Header: FC<unknown> = () => {
   };
 
   const router = useRouter();
-  const onKeyPress = ({ target }) => {
-    // I'm guessing you have value stored in state
-    if (target.charCode == 13) {
-      router.push("/");
-    }
-  };
-  const iconColor = theme === "light" ? "rgb(46, 44, 52)" : "white";
   return (
     <StyledHeader>
       <DataWrapper>
@@ -78,34 +71,12 @@ const Header: FC<unknown> = () => {
               <FontAwesomeIcon fixedWidth color={iconColor} icon={faBars} />
             </Button>
             {isShowingMobileNav ? (
-              <MobileNavWrapper>
-                <Link href="/" passHref>
-                  <MobileNavLink tabIndex={1} onClick={onNavClick}>
-                    About me
-                  </MobileNavLink>
-                </Link>
-                <Link href="/work">
-                  <MobileNavLink tabIndex={2} onClick={onNavClick}>
-                    Work
-                  </MobileNavLink>
-                </Link>
-                <NightModeLink tabIndex={3} onClick={() => setTheme()}>
-                  {theme === "light" ? "Night" : "Light"} mode
-                  {theme === "light" ? (
-                    <FontAwesomeIcon
-                      fixedWidth
-                      color={iconColor}
-                      icon={faMoon}
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      fixedWidth
-                      color={iconColor}
-                      icon={faSun}
-                    />
-                  )}
-                </NightModeLink>
-              </MobileNavWrapper>
+              <MobileNav
+                theme={theme}
+                onNavClick={onNavClick}
+                setTheme={setTheme}
+                iconColor={iconColor}
+              />
             ) : null}
           </div>
         ) : (
