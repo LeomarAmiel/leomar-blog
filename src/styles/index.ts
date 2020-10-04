@@ -87,6 +87,6 @@ html {
 
 * {
   transition: background-color 2s ease;
-  transition: color 0.5s ease;
+  transition: color 0.2s ease;
 }
 `;

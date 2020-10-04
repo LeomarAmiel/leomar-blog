@@ -1,5 +1,5 @@
 import { ThemeColorTypes } from "@styles/themes";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,12 +15,16 @@ export const NavLink = styled.a<{
   isSelected: boolean;
   theme: ThemeColorTypes;
 }>`
-  margin-right: 1.2rem;
-  color: ${({ theme, isSelected }) =>
-    isSelected ? theme.active : theme.inactiveTabText};
-  font-weight: ${({ isSelected }) => (isSelected ? 700 : 400)};
-  text-decoration: underline;
-  cursor: pointer;
+  ${({ theme, isSelected }) => css`
+    margin-right: 1.2rem;
+    color: ${isSelected ? theme.active : theme.inactiveTabText};
+    font-weight: ${isSelected ? 700 : 400};
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: ${theme.link};
+    }
+  `}
 `;
 
 export const Button = styled.button`
