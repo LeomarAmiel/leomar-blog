@@ -18,7 +18,7 @@ const initialSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 const Sitemap = () => null;
 
 export async function getServerSideProps({ res }: GetServerSidePropsContext) {
-  res?.setHeader("Content-Type", "text/xml");
+  res?.setHeader("content-type", "application/xml");
   res?.end(initialSitemap);
 }
 
