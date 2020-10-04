@@ -23,7 +23,7 @@ const About: FC<unknown> = () => {
   return (
     <Wrapper>
       <InnerWrapper>
-        <BigHey>Hey!</BigHey>
+        <BigHey>Heyyy!</BigHey>
       </InnerWrapper>
       <InnerWrapper>
         <Paragraph>

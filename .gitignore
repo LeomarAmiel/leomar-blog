@@ -2,3 +2,5 @@
 .next
 settings.json
 /out
+/out_publish/
+/out_functions/
