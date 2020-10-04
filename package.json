@@ -8,7 +8,7 @@
     "start": "next start",
     "build": "next build",
     "export": "next export",
-    "deploy": "next build && next export",
+    "deploy": "yarn build && yarn start",
     "lint": "eslint 'src/**'",
     "clean": "rm -rf .next && rm -rf out"
   },
