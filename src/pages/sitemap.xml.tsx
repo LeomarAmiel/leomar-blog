@@ -24,6 +24,7 @@ export const getServerSideProps = async ({
   res?.setHeader("Content-Type", "text/xml");
   res?.write(initialSitemap);
   res?.end();
+  return {};
 };
 
 export default Sitemap;
