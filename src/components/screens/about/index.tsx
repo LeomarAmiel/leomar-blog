@@ -4,6 +4,11 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 0 20%;
+  display: flex;
+  align-items: center;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
   @media (max-width: 600px) {
     padding: 0 2rem;
   }
@@ -19,33 +24,45 @@ const BigHey = styled(Paragraph)`
   font-style: italic;
 `;
 
+const Image = styled.img`
+  border-radius: 50%;
+  border: 0.2rem solid ${({ theme }) => theme.active};
+  background-color: ${({ theme }) => theme.active};
+  height: 14rem;
+  width: 14rem;
+  margin-right: 2.8rem;
+`;
+
 const About: FC<unknown> = () => {
   return (
     <Wrapper>
-      <InnerWrapper>
-        <BigHey>Heyyy!</BigHey>
-      </InnerWrapper>
-      <InnerWrapper>
-        <Paragraph>
-          Welcome to my website! This site is pretty bare bones for now. Hope
-          you bear with it for now!{" "}
-        </Paragraph>
-      </InnerWrapper>
-      <InnerWrapper>
-        <Paragraph>
-          I&apos;m a software engineer based in the Philippines! I have been
-          developing websites and apps for over 3 years now. I mainly do React
-          &#038; React Native. I also ❤️ using TypeScript!
-        </Paragraph>
-      </InnerWrapper>
-      <InnerWrapper>
-        <Paragraph>
-          In my free time, I mostly play with my friends online (given that
-          we&apos;re in the pandemic). I do my own espresso at home which is
-          kinda cool for me. It probably doesn&apos;t taste that good but
-          it&apos;s good enough for me!
-        </Paragraph>
-      </InnerWrapper>
+      <Image src="/static/yumoji.png" />
+      <div>
+        <InnerWrapper>
+          <BigHey>Heyyy!</BigHey>
+        </InnerWrapper>
+        <InnerWrapper>
+          <Paragraph>
+            Welcome to my website! This site is pretty bare bones for now. Hope
+            you bear with it for now!{" "}
+          </Paragraph>
+        </InnerWrapper>
+        <InnerWrapper>
+          <Paragraph>
+            I&apos;m a software engineer based in the Philippines! I have been
+            developing websites and apps for over 3 years now. I mainly do React
+            &#038; React Native. I also ❤️ using TypeScript!
+          </Paragraph>
+        </InnerWrapper>
+        <InnerWrapper>
+          <Paragraph>
+            In my free time, I mostly play with my friends online (given that
+            we&apos;re in the pandemic). I do my own espresso at home which is
+            kinda cool for me. It probably doesn&apos;t taste that good but
+            it&apos;s good enough for me!
+          </Paragraph>
+        </InnerWrapper>
+      </div>
     </Wrapper>
   );
 };

@@ -38,7 +38,7 @@ export default class MyApp extends App {
             <meta property="title" content="Leomar Amiel | Software Engineer" />
             <meta
               property="description"
-              content="Fullstack developer from the Philippines. Specialized in React, React Native, and Node"
+              content="Fullstack developer from the Philippines. Specializes in React, React Native, and Node"
             />
 
             <meta
