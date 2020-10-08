@@ -34,6 +34,13 @@ export default class MyApp extends App {
             />
             <meta charSet="utf-8" />
             <link rel="shortcut icon" href="/static/favicon.svg" />
+
+            <meta property="title" content="Leomar Amiel | Software Engineer" />
+            <meta
+              property="description"
+              content="Fullstack developer from the Philippines. Specialized in React, React Native, and Node"
+            />
+
             <meta
               property="og:title"
               content="Leomar Amiel | Software Engineer"
@@ -44,6 +51,20 @@ export default class MyApp extends App {
             />
             <meta property="og:image" content="/static/leomaramiel.jpeg" />
             <meta property="og:url" content="https://leomaramiel.tech/" />
+
+            <meta
+              property="twitter:title"
+              content="Leomar Amiel | Software Engineer"
+            />
+            <meta
+              property="twitter:description"
+              content="You need a website or app? I'm happy to help your team!"
+            />
+            <meta property="twitter:card" content="summary" />
+            <meta property="twitter:image" content="/static/leomaramiel.jpeg" />
+            <meta property="twitter:url" content="https://leomaramiel.tech/" />
+            <meta name="twitter:site" content="@LeomarAmiel" />
+            <meta name="twitter:creator" content="@LeomarAmiel" />
 
             <title>Leomar Amiel</title>
           </Head>
