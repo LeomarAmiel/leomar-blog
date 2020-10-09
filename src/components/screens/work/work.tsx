@@ -1,24 +1,12 @@
 import { FC, useState, useEffect } from "react";
-import styled from "styled-components";
-import { Section, ListItem } from "./work.styles";
+import {
+  Section,
+  ListItem,
+  ListItemDate,
+  ListItemHeading,
+  ListItemParagraph,
+} from "./work.styles";
 import { data } from "./work.data";
-
-const ListItemHeading = styled.h5`
-  font-size: 1.7rem;
-  color: ${(p) => p.theme.text};
-`;
-
-const ListItemParagraph = styled.p`
-  font-size: 1.4rem;
-  color: ${(p) => p.theme.text};
-`;
-
-const ListItemDate = styled.p`
-  font-size: 1rem;
-  margin-top: -0.2rem;
-  margin-bottom: 0.4rem;
-  color: ${(p) => p.theme.inactiveTabText};
-`;
 
 const Work: FC<unknown> = () => {
   const [opacity, setOpacity] = useState(0);

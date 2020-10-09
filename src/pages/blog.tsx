@@ -1,13 +1,13 @@
 import { Head, Header, Main } from "@components/common";
-import Work from "@components/screens/work/work";
+import Blog from "@components/screens/blog/blog";
 
 function WorkPage() {
   return (
     <div>
-      <Head canonicalUrl="https://leomaramiel.tech/work" />
+      <Head canonicalUrl="https://leomaramiel.tech/blog" />
       <Header />
       <Main>
-        <Work />
+        <Blog />
       </Main>
     </div>
   );

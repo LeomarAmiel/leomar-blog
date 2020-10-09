@@ -8,7 +8,7 @@
     "start": "next start",
     "build": "next build",
     "export": "next export",
-    "postbuild": "next-sitemap && next-on-netlify",
+    "postbuild": "yarn build && yarn export",
     "lint": "eslint 'src/**'",
     "clean": "rm -rf .next && rm -rf out"
   },

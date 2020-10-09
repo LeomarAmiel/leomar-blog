@@ -5,4 +5,5 @@ export const StyledMain = styled.main`
   display: flex;
   width: 100%;
   background-color: ${({ theme }) => theme.activeBackgroundColor};
+  padding-bottom: 4rem;
 `;

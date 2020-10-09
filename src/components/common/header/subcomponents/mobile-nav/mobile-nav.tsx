@@ -17,6 +17,21 @@ interface IProps {
   setTheme: () => void;
 }
 
+const links = [
+  {
+    href: "/",
+    label: "About me",
+  },
+  {
+    href: "/work",
+    label: "Work",
+  },
+  {
+    href: "/blog",
+    label: "Blog",
+  },
+];
+
 const MobileNav: React.FC<IProps> = ({ theme, iconColor, setTheme }) => {
   const [isShowingMobileNav, setIsShowingMobileNav] = useState(false);
 
@@ -41,17 +56,14 @@ const MobileNav: React.FC<IProps> = ({ theme, iconColor, setTheme }) => {
       </Button>
       {isShowingMobileNav ? (
         <MobileNavWrapper>
-          <Link href="/">
-            <MobileNavLink tabIndex={1} onClick={onNavClick}>
-              About me
-            </MobileNavLink>
-          </Link>
-          <Link href="/work">
-            <MobileNavLink tabIndex={2} onClick={onNavClick}>
-              Work
-            </MobileNavLink>
-          </Link>
-          <NightModeLink tabIndex={3} onClick={() => setTheme()}>
+          {links.map(({ href, label }, index) => (
+            <Link href={href} key={href}>
+              <MobileNavLink tabIndex={index + 1} onClick={onNavClick}>
+                {label}
+              </MobileNavLink>
+            </Link>
+          ))}
+          <NightModeLink tabIndex={links.length + 1} onClick={() => setTheme()}>
             {theme === "light" ? "Night" : "Light"} mode
             {theme === "light" ? (
               <FontAwesomeIcon fixedWidth color={iconColor} icon={faMoon} />

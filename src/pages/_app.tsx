@@ -28,12 +28,14 @@ export default class MyApp extends App {
                 });`,
               }}
             />
+
             <meta
               name="viewport"
               content="width=device-width,initial-scale=1"
             />
             <meta charSet="utf-8" />
             <link rel="shortcut icon" href="/static/favicon.svg" />
+            <title>Leomar Amiel</title>
 
             <meta property="title" content="Leomar Amiel | Software Engineer" />
             <meta
@@ -65,8 +67,7 @@ export default class MyApp extends App {
             <meta property="twitter:url" content="https://leomaramiel.tech/" />
             <meta name="twitter:site" content="@LeomarAmiel" />
             <meta name="twitter:creator" content="@LeomarAmiel" />
-
-            <title>Leomar Amiel</title>
+            <meta name="robots" content="noodp" />
           </Head>
           <Component {...pageProps} />
         </>

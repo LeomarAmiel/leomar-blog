@@ -1,10 +1,10 @@
-import Main from "@components/common/main";
-import About from "@screens/about";
-import Header from "@components/common/header";
+import About from "@components/screens/about/about";
+import { Head, Header, Main } from "@components/common";
 
-function Home() {
+function AboutPage() {
   return (
     <div>
+      <Head canonicalUrl="https://leomaramiel.tech/" />
       <Header />
       <Main>
         <About />
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default AboutPage;

@@ -12,19 +12,35 @@ interface IProps {
   setTheme: () => void;
 }
 
+const links = [
+  {
+    href: "/",
+    label: "About me",
+  },
+  {
+    href: "/work",
+    label: "Work",
+  },
+  {
+    href: "/blog",
+    label: "Blog",
+  },
+];
+
 const DesktopNav: FC<IProps> = ({ theme, setTheme, iconColor }) => {
   const router = useRouter();
   return (
     <Wrapper>
       <nav>
-        <Link href="/">
-          <NavLink isSelected={router.pathname === "/"}>About me</NavLink>
-        </Link>
-        <Link href="/work">
-          <NavLink isSelected={router.pathname === "/work"}>Work</NavLink>
-        </Link>
+        {links.map(({ href, label }, index) => (
+          <Link href={href} key={href}>
+            <NavLink tabIndex={index + 1} isSelected={router.pathname === href}>
+              {label}
+            </NavLink>
+          </Link>
+        ))}
       </nav>
-      <Button onClick={() => setTheme()}>
+      <Button tabIndex={links.length + 1} onClick={() => setTheme()}>
         {theme === "light" ? (
           <FontAwesomeIcon fixedWidth color={iconColor} icon={faMoon} />
         ) : (

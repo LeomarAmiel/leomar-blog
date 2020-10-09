@@ -1,4 +1,4 @@
-import Paragraph from "@components/common/paragraph";
+import { Paragraph } from "@components/common";
 import { FC } from "react";
 import styled from "styled-components";
 
@@ -30,13 +30,16 @@ const Image = styled.img`
   background-color: ${({ theme }) => theme.active};
   height: 14rem;
   width: 14rem;
-  margin-right: 2.8rem;
+  margin-right: 3.8rem;
+  @media (max-width: 900px) {
+    margin: 2.8rem;
+  }
 `;
 
 const About: FC<unknown> = () => {
   return (
     <Wrapper>
-      <Image src="/static/yumoji.png" />
+      <Image alt="My Yumoji" src="/static/yumoji.png" />
       <div>
         <InnerWrapper>
           <BigHey>Heyyy!</BigHey>
