@@ -8,7 +8,8 @@
     "start": "next start",
     "build": "next build",
     "export": "next export",
-    "postbuild": "yarn build && yarn export",
+    "deploy": "yarn build && yarn export",
+    "postbuild": "next-sitemap",
     "lint": "eslint 'src/**'",
     "clean": "rm -rf .next && rm -rf out"
   },
